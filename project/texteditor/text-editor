@@ -26,6 +26,10 @@ def font_courier():
     global text
     text.config(font="Courier")
 
+def font_consolas():
+    global text
+    text.config(font="Consolas")
+
 
 font = Menubutton(root, text="Font")
 font.grid()
@@ -35,8 +39,9 @@ Helvetica = IntVar()
 arial = IntVar()
 times = IntVar()
 Courier = IntVar()
+Consolas = IntVar()
 font.menu.add_checkbutton(label="Courier", variable=Courier,
                           command=font_courier)
-font.menu.add_checkbutton(label="Courier", variable=Courier,
-                          command=font_courier)
+font.menu.add_checkbutton(label="Consolas", variable=Consolas,
+                          command=font_consolas)
 root.mainloop()
