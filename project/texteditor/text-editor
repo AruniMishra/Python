@@ -10,7 +10,7 @@ text.grid()
 def saveas():
     global text
     t = text.get("1.0", "end-1c")
-    savelocation = filedialog.asksaveasfilename()
+    savelocation = filedialog.asksaveasfilename(defaultextension='.txt')
     if (savelocation is not None) and (len(savelocation)):
         print(f'savelocation:{savelocation}!')
         file1 = open(savelocation, "w+")
